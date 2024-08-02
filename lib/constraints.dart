@@ -15,7 +15,7 @@ final TextStyle kTextStyle = GoogleFonts.poppins(
 );
 
 final TextStyle kTextTitre = GoogleFonts.poppins(
-  fontSize: 25,
+  fontSize: 24,
   fontWeight: FontWeight.w900,
   color: Colors.black,
 );
@@ -27,7 +27,7 @@ final TextStyle kTextChampSaisie = GoogleFonts.poppins(
 );
 
 final TextStyle kTextSousTitre = GoogleFonts.poppins(
-  fontSize: 16,
+  fontSize: 14,
   fontWeight: FontWeight.w500,
   color: Colors.grey[600],
 );

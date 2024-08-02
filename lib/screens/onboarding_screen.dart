@@ -32,11 +32,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                     onPressed: _currentPage > 0
                         ? () {
-                      _controller.previousPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.ease,
-                      );
-                    }
+                            _controller.previousPage(
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.ease,
+                            );
+                          }
                         : null,
                   ),
                   TextButton(
@@ -60,25 +60,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       image: 'assets/images/Blood1.png',
                       title: "Donner à plusieurs",
                       description:
-                      "Chaque don de sang peut sauver des vies précieuses. Soyez un héros aujourd'hui !",
+                          "Chaque don de sang peut sauver des vies précieuses. Soyez un héros aujourd'hui !",
                     ),
                     OnboardingPage(
                       image: 'assets/images/Blood2.png',
                       title: "Aider à la recherche",
                       description:
-                      "Contribuez à des avancées médicales significatives en partageant votre sang.",
+                          "Contribuez à des avancées médicales significatives en partageant votre sang.",
                     ),
                     OnboardingPage(
                       image: 'assets/images/Blood3.png',
                       title: "Trouver un donneur",
                       description:
-                      "Besoin de sang ? Trouver un donneur compatible grace à notre Application.",
+                          "Besoin de sang ? Trouver un donneur compatible grace à notre Application.",
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 35),
                 child: SmoothPageIndicator(
                   controller: _controller, // PageController
                   count: 3,
@@ -92,23 +92,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 80.0),
+                padding: const EdgeInsets.only(bottom: 30.0),
                 child: GestureDetector(
                   onTap: _currentPage < 2
                       ? () {
-                    _controller.nextPage(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.ease,
-                    );
-                  }
+                          _controller.nextPage(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.ease,
+                          );
+                        }
                       : () {
-                    // Naviguer vers l'écran suivant après l'onboarding
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return const Login();
-                      },
-                    ));
-                  },
+                          // Naviguer vers l'écran suivant après l'onboarding
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) {
+                              return const Login();
+                            },
+                          ));
+                        },
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12.0),
@@ -118,7 +118,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           color: kPrimaryRougeB.withOpacity(0.2),
                           spreadRadius: 5,
                           blurRadius: 10,
-                          offset: const Offset(0, 3), // changes position of shadow
+                          offset:
+                              const Offset(0, 3), // changes position of shadow
                         ),
                       ],
                     ),
